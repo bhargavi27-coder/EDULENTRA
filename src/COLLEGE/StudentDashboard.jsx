@@ -1129,6 +1129,17 @@ function StudentDashboard() {
                                 </b>
                             </p>
 
+                            <button
+                                className="view-attendance-btn"
+                                onClick={() =>
+                                    handleMenuClick(
+                                        "attendance"
+                                    )
+                                }
+                            >
+                                View Attendance →
+                            </button>
+
                         </div>
 
                     </div>
@@ -1724,6 +1735,278 @@ function StudentDashboard() {
                                 <span>
                                     Placement Drive Available
                                 </span>
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                )}
+
+
+                {/* =================================================
+                   ATTENDANCE
+                ================================================= */}
+
+                {activeSection === "attendance" && (
+
+                    <section className="module-section attendance-section">
+
+                        <div className="attendance-page-header">
+
+                            <div>
+
+                                <h2>
+                                    📊 Attendance
+                                </h2>
+
+                                <p>
+                                    View your monthly and subject-wise attendance.
+                                </p>
+
+                            </div>
+
+                            <button
+                                className="attendance-back-btn"
+                                onClick={() =>
+                                    handleMenuClick("dashboard")
+                                }
+                            >
+                                ← Back to Dashboard
+                            </button>
+
+                        </div>
+
+
+                        {/* ATTENDANCE SUMMARY */}
+
+                        <div className="attendance-summary">
+
+                            <div className="attendance-summary-card">
+
+                                <span>
+                                    Overall Attendance
+                                </span>
+
+                                <strong>
+                                    85%
+                                </strong>
+
+                            </div>
+
+
+                            <div className="attendance-summary-card">
+
+                                <span>
+                                    Present
+                                </span>
+
+                                <strong>
+                                    102
+                                </strong>
+
+                            </div>
+
+
+                            <div className="attendance-summary-card">
+
+                                <span>
+                                    Absent
+                                </span>
+
+                                <strong>
+                                    18
+                                </strong>
+
+                            </div>
+
+
+                            <div className="attendance-summary-card">
+
+                                <span>
+                                    Total Classes
+                                </span>
+
+                                <strong>
+                                    120
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        {/* SUBJECT-WISE ATTENDANCE */}
+
+                        <div className="attendance-block">
+
+                            <h3>
+                                Subject-wise Attendance
+                            </h3>
+
+                            <div className="attendance-table-wrapper">
+
+                                <table className="attendance-table">
+
+                                    <thead>
+
+                                        <tr>
+                                            <th>Subject</th>
+                                            <th>Present</th>
+                                            <th>Absent</th>
+                                            <th>Total</th>
+                                            <th>Attendance</th>
+                                        </tr>
+
+                                    </thead>
+
+                                    <tbody>
+
+                                        <tr>
+                                            <td>SSP</td>
+                                            <td>20</td>
+                                            <td>3</td>
+                                            <td>23</td>
+                                            <td className="attendance-good">
+                                                87%
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>NLP</td>
+                                            <td>18</td>
+                                            <td>2</td>
+                                            <td>20</td>
+                                            <td className="attendance-good">
+                                                90%
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>IQTA</td>
+                                            <td>19</td>
+                                            <td>4</td>
+                                            <td>23</td>
+                                            <td className="attendance-good">
+                                                83%
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>CV & IP</td>
+                                            <td>21</td>
+                                            <td>4</td>
+                                            <td>25</td>
+                                            <td className="attendance-good">
+                                                84%
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>DV</td>
+                                            <td>24</td>
+                                            <td>5</td>
+                                            <td>29</td>
+                                            <td className="attendance-good">
+                                                83%
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+
+                        </div>
+
+
+                        {/* MONTHLY ATTENDANCE */}
+
+                        <div className="attendance-block">
+
+                            <h3>
+                                September 2026 Attendance
+                            </h3>
+
+                            <div className="attendance-table-wrapper">
+
+                                <table className="attendance-table">
+
+                                    <thead>
+
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Day</th>
+                                            <th>Classes</th>
+                                            <th>Present</th>
+                                            <th>Absent</th>
+                                            <th>Status</th>
+                                        </tr>
+
+                                    </thead>
+
+                                    <tbody>
+
+                                        <tr>
+                                            <td>01 Sep 2026</td>
+                                            <td>Tuesday</td>
+                                            <td>5</td>
+                                            <td>5</td>
+                                            <td>0</td>
+                                            <td className="status-present">
+                                                Present
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>02 Sep 2026</td>
+                                            <td>Wednesday</td>
+                                            <td>5</td>
+                                            <td>4</td>
+                                            <td>1</td>
+                                            <td className="status-present">
+                                                Present
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>03 Sep 2026</td>
+                                            <td>Thursday</td>
+                                            <td>5</td>
+                                            <td>5</td>
+                                            <td>0</td>
+                                            <td className="status-present">
+                                                Present
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>04 Sep 2026</td>
+                                            <td>Friday</td>
+                                            <td>5</td>
+                                            <td>3</td>
+                                            <td>2</td>
+                                            <td className="status-absent">
+                                                Low Attendance
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>05 Sep 2026</td>
+                                            <td>Saturday</td>
+                                            <td>4</td>
+                                            <td>4</td>
+                                            <td>0</td>
+                                            <td className="status-present">
+                                                Present
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+
+                                </table>
+
                             </div>
 
                         </div>
